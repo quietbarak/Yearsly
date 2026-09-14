@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - Calculate Your Exact Age Free | Yearsly</title>
+    <meta name="description" content="Calculate your exact age in years, months, and days instantly with Yearsly's free online age calculator. No sign-up needed, 100% accurate.">
+    <link rel="canonical" href="https://yearsly.vercel.app/">
+    <meta property="og:title" content="Yearsly - Free Age Calculator">
+    <meta property="og:description" content="Calculate your exact age in years, months, and days instantly.">
+    <meta property="og:image" content="https://yearsly.vercel.app/images/og-image.png">
+    <meta property="og:url" content="https://yearsly.vercel.app/">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Yearsly" class="logo-img">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="age-calculator.html">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Free Age Calculator</h1>
+            <p>Calculate your exact age in years, months & days instantly.</p>
+        </div>
+    </section>
+
+    <!-- Main Calculator Card -->
+    <section class="calc-section">
+        <div class="container calc-layout">
+            <!-- Left: Why Yearsly? -->
+            <aside class="side-panel why-panel">
+                <h3>Why Yearsly?</h3>
+                <ul>
+                    <li>100% Free</li>
+                    <li>No sign-up required</li>
+                    <li>Accurate to the day</li>
+                    <li>Works entirely in your browser</li>
+                    <li>Handles leap years correctly</li>
+                </ul>
+            </aside>
+
+            <!-- Center: Calculator Card -->
+            <div class="calculator-card">
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" max="2026-09-12">
+                </div>
+                <button class="btn" id="calc-btn">Calculate Age</button>
+
+                <div class="result-box" id="result">
+                    <!-- Result will appear here -->
+                </div>
+            </div>
+
+            <!-- Right: Did You Know? -->
+            <aside class="side-panel fact-panel">
+                <h3>Did You Know?</h3>
+                <div id="fun-fact">
+                    <p>Enter your date of birth to see your birth day details.</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Other Free Tools -->
+    <section class="tools-section">
+        <div class="container">
+            <h2>Other Free Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>Date Difference</h3>
+                    <p>Calculate the exact number of days between two dates.</p>
+                    <a href="date-difference.html" class="tool-link">Open Tool</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Birthday Countdown</h3>
+                    <p>Find out how many days until your next birthday.</p>
+                    <a href="birthday-countdown.html" class="tool-link">Open Tool</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Age Difference</h3>
+                    <p>Compare the age difference between two people.</p>
+                    <a href="age-difference.html" class="tool-link">Open Tool</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">How accurate is this age calculator?</div>
+                <div class="faq-answer">
+                    <p>Our calculator is highly accurate and accounts for leap years, varying month lengths, and provides exact years, months, and days.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Does it consider leap years?</div>
+                <div class="faq-answer">
+                    <p>Yes, the calculator automatically accounts for leap years to ensure precise results.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is my date of birth stored?</div>
+                <div class="faq-answer">
+                    <p>No, your date of birth is processed entirely in your browser and is never stored or sent to any server.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I calculate age on a future date?</div>
+                <div class="faq-answer">
+                    <p>Yes, our advanced calculator allows you to calculate age on any past or future date.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Yearsly. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms of Service</a> | 
+                <a href="about.html">About</a> | 
+                <a href="contact.html">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>
