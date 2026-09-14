@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yearsly - Calculate Exact Age in Years, Months & Days</title>
+    <meta name="description" content="Free online age calculator by Yearsly. Calculate your exact age in years, months, and days instantly.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Yearsly" class="logo-img">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="age-calculator.html">Tools</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Age Calculator</h1>
+            <p>Calculate your exact age in years, months, and days.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="calculator-card">
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" max="2026-09-12">
+                </div>
+                <div class="form-group">
+                    <label for="calc-date">Calculate on (optional)</label>
+                    <input type="date" id="calc-date" value="2026-09-12">
+                </div>
+                <button class="btn" id="calc-btn">Calculate Age</button>
+                <div class="result-box" id="result"></div>
+</div>
+        </div>
+    </section>
+
+    <section class="tools-section">
+        <div class="container">
+            <h2>Other Free Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card"><h3>Date Difference</h3><p>Calculate days between two dates.</p><a href="date-difference.html" class="tool-link">Open Tool</a></div>
+                <div class="tool-card"><h3>Birthday Countdown</h3><p>Days until your next birthday.</p><a href="birthday-countdown.html" class="tool-link">Open Tool</a></div>
+                <div class="tool-card"><h3>Age Difference</h3><p>Compare age between two people.</p><a href="age-difference.html" class="tool-link">Open Tool</a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Yearsly. All rights reserved.</p>
+            <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a> | <a href="contact.html">Contact</a></p>
+        </div>
+    </footer>
+
+    <script src="js/calculator.js"></script>
+</body>
+</html>

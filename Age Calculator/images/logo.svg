@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>
+      .years { fill: #1F2937; }
+      .ly { fill: #3B82F6; }
+    </style>
+  </defs>
+
+  <!-- Clock Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Outer circle -->
+    <circle cx="24" cy="24" r="20" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Inner accent circle -->
+    <circle cx="24" cy="24" r="3" fill="#3B82F6"/>
+    <!-- Hour hand -->
+    <line x1="24" y1="24" x2="24" y2="14" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Minute hand -->
+    <line x1="24" y1="24" x2="34" y2="24" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="64" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" letter-spacing="-0.5">
+    <tspan class="years">Years</tspan><tspan class="ly">ly</tspan>
+  </text>
+</svg>
