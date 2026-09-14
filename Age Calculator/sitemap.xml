@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://agecalc.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://agecalc.com/age-calculator.html</loc><priority>0.9</priority></url>
-  <url><loc>https://agecalc.com/date-difference.html</loc><priority>0.8</priority></url>
-  <url><loc>https://agecalc.com/age-difference.html</loc><priority>0.8</priority></url>
-  <url><loc>https://agecalc.com/birthday-countdown.html</loc><priority>0.8</priority></url>
-  <url><loc>https://agecalc.com/about.html</loc><priority>0.5</priority></url>
-  <url><loc>https://agecalc.com/contact.html</loc><priority>0.5</priority></url>
-  <url><loc>https://agecalc.com/privacy-policy.html</loc><priority>0.5</priority></url>
-  <url><loc>https://agecalc.com/terms.html</loc><priority>0.5</priority></url>
+  <url><loc>https://yearsly.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://yearsly.vercel.app/age-calculator.html</loc><priority>0.9</priority></url>
+  <url><loc>https://yearsly.vercel.app/date-difference.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yearsly.vercel.app/age-difference.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yearsly.vercel.app/birthday-countdown.html</loc><priority>0.8</priority></url>
+  <url><loc>https://yearsly.vercel.app/about.html</loc><priority>0.5</priority></url>
+  <url><loc>https://yearsly.vercel.app/contact.html</loc><priority>0.5</priority></url>
+  <url><loc>https://yearsly.vercel.app/privacy-policy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://yearsly.vercel.app/terms.html</loc><priority>0.5</priority></url>
 </urlset>
