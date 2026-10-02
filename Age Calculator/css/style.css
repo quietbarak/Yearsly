@@ -561,13 +561,26 @@ a:hover { color: var(--accent-hover); }
    16. Responsive: Tablet (<=900px)
    ============================================================ */
 @media (max-width: 900px) {
-  .calc-layout { grid-template-columns: 1fr; }
-  .side-panel  { display: none; }
+  .calc-layout { 
+    grid-template-columns: minmax(auto, 500px); 
+    justify-content: center;
+  }
+  .calculator-card { order: -1; }
   .tools-grid  { grid-template-columns: repeat(2,1fr); }
 }
 
 /* ============================================================
-   17. Responsive: Mobile (<=600px)
+   17. Responsive: Mobile Landscape (<=768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero { padding: var(--spacing-6) 0 var(--spacing-4); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom { flex-direction: column; gap: var(--spacing-3); text-align: center; }
+}
+
+/* ============================================================
+   18. Responsive: Mobile (<=600px)
    ============================================================ */
 @media (max-width: 600px) {
   .hero { padding: 48px 0 40px; }
