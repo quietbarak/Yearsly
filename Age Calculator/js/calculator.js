@@ -312,7 +312,14 @@ function initDateDifference() {
   if (!date1Input || !date2Input || !btn || !resultBox) return;
 
   // Default date2 to today
-  date2Input.value = today().toISOString().split('T')[0];
+  const todayStr = today().toISOString().split('T')[0];
+  date2Input.value = todayStr;
+  
+  // Set boundaries so browsers display past years in the dropdown easily
+  date1Input.min = '1900-01-01';
+  date1Input.max = todayStr;
+  date2Input.min = '1900-01-01';
+  date2Input.max = todayStr;
 
   function run() {
     clearFieldError(date1Input);
