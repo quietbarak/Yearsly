@@ -292,10 +292,9 @@ function initAgeCalculator() {
   }
 
   btn.addEventListener('click', run);
-  dobInput.addEventListener('change', function () { if (this.value) run(); });
   dobInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') run(); });
   if (calcDateInput) {
-    calcDateInput.addEventListener('change', function () { if (dobInput.value) run(); });
+    calcDateInput.addEventListener('keydown', function (e) { if (e.key === 'Enter' && dobInput.value) run(); });
   }
 }
 
@@ -493,7 +492,6 @@ function initBirthdayCountdown() {
   }
 
   btn.addEventListener('click', run);
-  dobInput.addEventListener('change', function () { if (this.value) run(); });
   dobInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') run(); });
 }
 
