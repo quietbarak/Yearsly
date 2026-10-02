@@ -1,0 +1,12 @@
+# Agent / hive system files (not part of the website)
+hive/
+palace/
+roster-backups/
+roster.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
