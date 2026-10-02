@@ -544,6 +544,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initDateDifference();
   initAgeDifference();
   initBirthdayCountdown();
+  initBusinessDays();
   initFAQ();
 });
 
@@ -567,3 +568,84 @@ document.addEventListener("DOMContentLoaded", () => {
     else header.classList.remove('scrolled');
   });
 });
+
+/* ============================================================
+   TOOL 5: Business Days Calculator
+   Elements: #date1, #date2, #biz-calc-btn, #result
+   ============================================================ */
+function initBusinessDays() {
+  const date1Input = document.getElementById('date1');
+  const date2Input = document.getElementById('date2');
+  const btn        = document.getElementById('biz-calc-btn');
+  const resultBox  = document.getElementById('result');
+
+  if (!date1Input || !date2Input || !btn || !resultBox) return;
+
+  const todayStr = today().toISOString().split('T')[0];
+  date2Input.value = todayStr;
+  
+  function run() {
+    clearFieldError(date1Input);
+    clearFieldError(date2Input);
+
+    const d1Str = date1Input.value;
+    const d2Str = date2Input.value;
+
+    if (!d1Str) { showFieldError(date1Input, 'Please enter the first date.'); return; }
+    if (!d2Str) { showFieldError(date2Input, 'Please enter the second date.'); return; }
+
+    const d1 = parseLocalDate(d1Str);
+    const d2 = parseLocalDate(d2Str);
+
+    if (!d1 || !d2) return;
+
+    const from = d1 <= d2 ? d1 : d2;
+    const to = d1 <= d2 ? d2 : d1;
+    
+    // Calculate business days
+    let count = 0;
+    let cur = new Date(from);
+    while (cur <= to) {
+      const day = cur.getDay();
+      if (day !== 0 && day !== 6) { // Not Sunday and Not Saturday
+        count++;
+      }
+      cur.setDate(cur.getDate() + 1);
+    }
+    
+    // Total calendar days
+    const totalDays = Math.round((to - from) / (1000 * 60 * 60 * 24)) + 1; // inclusive of end date? Usually exclusive for difference, but business days implies inclusive of the range.
+    // Let's match standard difference:
+    // If same day, is it 0 difference or 1 day? Difference is 0.
+    // If d1 is Monday, d2 is Tuesday, diff is 1. Business days = 1.
+    // Let's adjust algorithm for standard exclusive end:
+    count = 0;
+    cur = new Date(from);
+    while (cur < to) {
+      const day = cur.getDay();
+      if (day !== 0 && day !== 6) {
+        count++;
+      }
+      cur.setDate(cur.getDate() + 1);
+    }
+
+    const totalDaysVal = Math.round((to - from) / (1000 * 60 * 60 * 24));
+
+    resultBox.innerHTML = `
+      <h4>Business Days</h4>
+      <div class="result-age">${count} Working Days</div>
+      <ul class="result-details">
+        <li><strong>Calendar Days:</strong> ${totalDaysVal} days</li>
+        <li><strong>Weekends:</strong> ${totalDaysVal - count} days</li>
+      </ul>
+    `;
+    resultBox.classList.add('active');
+  }
+
+  btn.addEventListener('click', run);
+  [date1Input, date2Input].forEach(inp => {
+    inp.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') run();
+    });
+  });
+}

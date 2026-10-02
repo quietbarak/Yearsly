@@ -37,6 +37,39 @@
       }
     }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How are the days between two dates calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We subtract the earlier date from the later date using standard calendar algorithms, accounting for the varying lengths of months and leap years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the date difference include the end date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By default, date difference calculations measure the elapsed time between two points. It counts the number of midnights between the start and end date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I calculate future dates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. You can select any two dates, past or future, spanning from the year 1900 up to the year 2100."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -100,6 +133,31 @@
                     <p>Our calculators account for leap years and precise month lengths to ensure 100% accuracy.</p>
                 </div>
             </aside>
+        </div>
+    </section>
+
+    
+    <section class="faq-section reveal">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+
+                <div class="faq-item">
+                    <div class="faq-question">How are the days between two dates calculated?</div>
+                    <div class="faq-answer"><p>We subtract the earlier date from the later date using standard calendar algorithms, accounting for the varying lengths of months and leap years.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Does the date difference include the end date?</div>
+                    <div class="faq-answer"><p>By default, date difference calculations measure the elapsed time between two points. It counts the number of midnights between the start and end date.</p></div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I calculate future dates?</div>
+                    <div class="faq-answer"><p>Absolutely. You can select any two dates, past or future, spanning from the year 1900 up to the year 2100.</p></div>
+                </div>
+
+            </div>
         </div>
     </section>
 
