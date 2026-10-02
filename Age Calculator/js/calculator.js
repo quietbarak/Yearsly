@@ -208,9 +208,10 @@ function initAgeCalculator() {
   const card = dobInput.closest('.calculator-card');
   if (card && card.dataset.tool === 'birthday-countdown') return;
 
-  // Set the DOB max to today (not a hardcoded date!)
+  // Set the DOB max to today and min to 1900 to fix browser UI bugs
   const todayStr = today().toISOString().split('T')[0];
   dobInput.max = todayStr;
+  dobInput.min = '1900-01-01';
 
   // If the "calculate on date" input exists, default it to today
   if (calcDateInput) {
@@ -378,7 +379,9 @@ function initAgeDifference() {
 
   const todayStr = today().toISOString().split('T')[0];
   dob1Input.max = todayStr;
+  dob1Input.min = '1900-01-01';
   dob2Input.max = todayStr;
+  dob2Input.min = '1900-01-01';
 
   function run() {
     clearFieldError(dob1Input);
@@ -443,6 +446,7 @@ function initBirthdayCountdown() {
 
   const todayStr = today().toISOString().split('T')[0];
   dobInput.max = todayStr;
+  dobInput.min = '1900-01-01';
 
   function run() {
     clearFieldError(dobInput);
